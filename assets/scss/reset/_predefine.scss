@@ -13,6 +13,7 @@ body {
 	color: $bColor;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: 0;
 }
 
 h1,
@@ -195,4 +196,6 @@ ul{
         padding-top: 15px;
     }
 }
+
+
 

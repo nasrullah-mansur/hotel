@@ -34,6 +34,8 @@ body {
   color: #7a838b;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: 0;
+  transition: 0;
 }
 
 h1,
@@ -263,7 +265,7 @@ ul {
   display: block;
   font-size: 18px;
   font-family: "Josefin Sans", sans-serif;
-  color: #7a838b;
+  color: #040e27;
   font-weight: 600;
   margin-right: 30px;
   -webkit-transition: all 0.3s;
@@ -304,6 +306,10 @@ ul {
   font-weight: 600;
   border-right: 1px solid #eee;
   padding-right: 20px;
+}
+
+.header .content .contact ul li.phone a {
+  color: #040e27;
 }
 
 .header .content .search {
@@ -650,10 +656,10 @@ ul {
 .filter .content select {
   height: 55px;
   padding: 0 15px;
-  width: 30%;
+  width: calc(30% - 15px);
   margin-right: 15px;
   border: 0;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .filter .content input:focus,
@@ -670,6 +676,13 @@ ul {
   font-size: 18px;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.filter .content button:hover {
+  background-color: #ffffff;
+  color: #040e27;
 }
 
 .destination {

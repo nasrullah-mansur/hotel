@@ -19,10 +19,10 @@
         select {
             height: 55px;
             padding: 0 15px;
-            width: 30%;
+            width: calc(30% - 15px);
             margin-right: 15px;
             border: 0;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.9);
 
             &:focus {
                 background-color: #fff;
@@ -38,6 +38,12 @@
             font-size: 18px;
             font-family: $titleFont;
             font-weight: 600;
+            transition: $transition;
+
+            &:hover {
+                background-color: $white;
+                color: $titleColor;
+            }
         }
     }
 }

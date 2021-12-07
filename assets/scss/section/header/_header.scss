@@ -30,7 +30,7 @@
                         display: block;
                         font-size: 18px;
                         font-family: $titleFont;
-                        color: $bColor;
+                        color: $titleColor;
                         font-weight: 600;
                         margin-right: 30px;
                         transition: $transition;
@@ -69,6 +69,10 @@
                         font-weight: 600;
                         border-right: 1px solid #eee;
                         padding-right: 20px;
+
+                        a {
+                            color: $titleColor;
+                        }
                     }
                 }
             }
