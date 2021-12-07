@@ -1,0 +1,114 @@
+.header {
+    background-color: $white;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    transition: $transition;
+
+    .content {
+        display: flex;
+        align-items: center;
+
+        .logo {
+
+            img {
+                max-height: 90px;
+            }
+        }
+
+        .list {
+            margin-left: 50px;
+
+            ul {
+                display: flex;
+
+                li {
+                    a {
+                        display: block;
+                        font-size: 18px;
+                        font-family: $titleFont;
+                        color: $bColor;
+                        font-weight: 600;
+                        margin-right: 30px;
+                        transition: $transition;
+
+                        &:hover {
+                            color: $color-three;
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact {
+            margin-left: auto;
+
+            ul {
+                display: flex;
+
+                li {
+                    a {
+                        display: block;
+                        font-size: 16px;
+                        color: $bColor;
+                        transition: $transition;
+                        margin-left: 20px;
+                        font-weight: 400;
+
+                        &:hover {
+                            color: $color-three;
+                        }
+                    }
+
+                    &.phone {
+                        font-size: 18px;
+                        font-family: $titleFont;
+                        font-weight: 600;
+                        border-right: 1px solid #eee;
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+
+        .search {
+            margin-left: 30px;
+            a {
+                width: 90px;
+                height: 90px;
+                background-color: $primary-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                i {
+                    font-size: 18px;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &.fixed-top {
+        position: fixed;
+        box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.1);
+
+        .content {
+            .logo {
+                img {
+                    max-height: 50px;
+                }
+            }
+
+            .search {
+                a {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}

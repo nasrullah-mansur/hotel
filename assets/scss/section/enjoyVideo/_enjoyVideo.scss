@@ -1,0 +1,62 @@
+.enjoy-video {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    .content {
+        display: flex;
+        flex-direction: column;
+        height: 450px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h2 {
+            font-size: 120px;
+            font-family: $bannerFont;
+            font-weight: 400;
+            color: $white;
+            margin-bottom: 50px;
+        }
+
+        a {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+            background-color: $primary-color;
+            border-radius: 50%;
+            color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: $primary-color;
+                border-radius: 50%;
+                animation: pulse-border 1500ms ease-out infinite;
+                left: 0;
+                bottom: 0;
+                z-index: -9;
+            }
+        }
+    }
+}
+
+@keyframes pulse-border {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+}
