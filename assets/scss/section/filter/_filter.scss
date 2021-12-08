@@ -13,6 +13,11 @@
 
         form {
             display: flex;
+
+            @media (max-width: 767.98px) {
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
         }
 
         input,
@@ -27,6 +32,17 @@
             &:focus {
                 background-color: #fff;
             }
+
+            @media (max-width: 767.98px) {
+                width: calc(50% - 7.5px);
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
+
+            @media (max-width: 575px) {
+                width: 100%;
+                margin-bottom: 15px;
+            }
         }
 
         button {
@@ -39,6 +55,17 @@
             font-family: $titleFont;
             font-weight: 600;
             transition: $transition;
+
+            @media (max-width: 767.98px) {
+                width: calc(50% - 7.5px);
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
+
+            @media (max-width: 575px) {
+                width: 100%;
+                margin-bottom: 15px;
+            }
 
             &:hover {
                 background-color: $white;

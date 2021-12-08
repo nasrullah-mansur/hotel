@@ -45,6 +45,10 @@
             h4 {
                 color: $white;
                 margin-bottom: 20px;
+
+                @media (max-width: 767.98px) {
+                    margin-top: 30px;
+                }
             }
 
             a {
@@ -136,6 +140,15 @@
         margin-top: 30px;
         padding: 20px 0 30px;
 
+        @media (max-width: 767.98px) {
+            flex-direction: column-reverse;
+            align-items: center;
+
+            .text {
+                margin-top: 10px;
+            }
+        }
+
         .cards {
             display: flex;
             align-items: center;
@@ -153,6 +166,14 @@
 
                     img {
                         width: 40px;
+                    }
+
+                    @media (max-width: 767.98px) {
+                        margin-left: 6px;
+
+                        img {
+                            width: 35px;
+                        }
                     }
                 }
             }

@@ -39,6 +39,10 @@ $(document).ready(function() {
         }
     })
 
+    $('.mobile-menu').on('click', () => {
+        $('.header .content .list').slideToggle();
+    })
+
 
 
     new VenoBox({

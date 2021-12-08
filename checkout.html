@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Agency</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/venobox.min.css" />
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <!-- Search area start -->
+    <div class="search-form">
+        <span class="close">
+            <i class="fas fa-times"></i>
+        </span>
+        <form>
+            <input type="text" placeholder="Search here.." />
+            <button>Search</button>
+        </form>
+    </div>
+    <!-- Search area end -->
+
+    <!-- Header start -->
+    <header class="header">
+        <div class="content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="logo" />
+                </a>
+            </div>
+            <div class="list">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Destination</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <ul>
+                    <li class="phone">
+                        <a href="#"><i class="fas fa-phone-alt"></i> 10(256)-928 256</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search">
+                <a href="#" class="show-search">
+                    <i class="fas fa-search"></i>
+                </a>
+                <a href="#" class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- Header end -->
+
+    <!-- Page banner start -->
+    <section class="page-banner" style="background-image: url(assets/images/slider-1.webp);">
+        <div class="container">
+            <h1>Checkout</h1>
+            <ul class="paginate">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">My Cart</a></li>
+                <li><a href="#">Checkout</a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- Page banner end -->
+
+    <!-- Checkout start -->
+    <section class="checkout">
+        <div class="container">
+            <form>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="details">
+                            <h2>Billing Details</h2>
+                            <div class="input-item">
+                                <input type="text" placeholder="First name *">
+                            </div>
+                            <div class="input-item">
+                                <input type="text" placeholder="Last name *">
+                            </div>
+                            <div class="input-item">
+                                <input type="text" placeholder="Company name">
+                            </div>
+                            <div class="input-item">
+                                <select>
+                                    <option selected>Select country *</option>
+                                    <option value="1">Pakistan</option>
+                                    <option value="1">Bangladesh</option>
+                                    <option value="1">United Kindom</option>
+                                    <option value="1">United State</option>
+                                </select>
+                            </div>
+                            <div class="input-item">
+                                <input type="text" placeholder="Address *">
+                            </div>
+                            <div class="input-item">
+                                <input type="text" placeholder="Address line 2">
+                            </div>
+                            <div class="input-item">
+                                <input type="text" placeholder="City / Town *">
+                            </div>
+                            <div class="input-item">
+                                <input type="text" placeholder="State / Province *">
+                            </div>
+                            <div class="input-item">
+                                <input type="text" placeholder="Postcode / Zip code *">
+                            </div>
+                            <div class="input-item">
+                                <input type="text" placeholder="Phone *">
+                            </div>
+                            <div class="input-item">
+                                <input type="text" placeholder="Email *">
+                            </div>
+                            <div class="input-item">
+                                <h3>Additional information</h3>
+                                <textarea placeholder="Additional information"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="order">
+                            <h2>Your Orders</h2>
+                            <div class="content">
+                                <nav class="list">
+                                    <ul>
+                                        <li>
+                                            <span class="text-strong">Product</span>
+                                            <span class="text-strong">Total</span>
+                                        </li>
+                                        <li class="border-top">
+                                            <span>California Tour <span class="text-strong">x 2</span></span>
+                                            <span>$90.00</span>
+                                        </li>
+                                        <li>
+                                            <span>United State Tour <span class="text-strong">x 1</span></span>
+                                            <span>$55.00</span>
+                                        </li>
+                                        <li>
+                                            <span>Canada Tour <span class="text-strong">x 3</span></span>
+                                            <span>$204.00</span>
+                                        </li>
+                                        <li class="border-top">
+                                            <span class="text-strong">SubTotal</span>
+                                            <span class="text-strong">$349.00</span>
+                                        </li>
+                                        <li>
+                                            <span class="text-strong">Total</span>
+                                            <span class="text-strong">$349.00</span>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div class="payment">
+                                    <h3>Payment Method</h3>
+                                    <div id="accordion">
+                                        <div class="accordion payment-chose" id="accordionExample">
+                                            <div class="accordion-item">
+                                                <div id="pay-1">
+                                                    <div class="payment-chose">
+                                                        <input name="payment" type="radio" id="card-1">
+                                                        <label class="collapsed" data-bs-toggle="collapse"
+                                                            data-bs-target="#coll-pay-1" aria-expanded="false"
+                                                            aria-controls="coll-pay-1" for="card-1"><i class="fas fa-check"></i> Card
+                                                            Payment</label>
+                                                    </div>
+                                                </div>
+                                                <div id="coll-pay-1" class="accordion-collapse collapse"
+                                                    aria-labelledby="pay-1" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body">
+                                                        <p>There are many variations of passages of Lorem Ipsum
+                                                            available, but
+                                                            the majority have suffered alteration. </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <div class="accordion-header" id="pay-2">
+                                                    <div class="payment-chose">
+                                                        <input name="payment" type="radio" id="card-2">
+                                                        <label class="collapsed" data-bs-toggle="collapse"
+                                                            data-bs-target="#coll-pay-2" aria-expanded="false"
+                                                            aria-controls="coll-pay-2" for="card-2"><i
+                                                                class="fas fa-check"></i>PayPal</label>
+                                                    </div>
+                                                </div>
+                                                <div id="coll-pay-2" class="accordion-collapse collapse"
+                                                    aria-labelledby="pay-2" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body">
+                                                        <p>Pay via PayPal, you can pay with your credit card if you
+                                                            don't have a
+                                                            PayPal account.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="btn-area">
+                                    <button type="submit">Place Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Checkout end -->
+
+    <!-- Footer start -->
+    <section class="footer">
+        <div class="container">
+            <div class="subscriber">
+                <form>
+                    <input type="text" placeholder="Subscribe now" />
+                    <button><i class="far fa-paper-plane"></i> Send</button>
+                </form>
+            </div>
+            <div class="content">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item logo">
+                            <a href="#">
+                                <img src="assets/images/logo.png" alt="img" />
+                            </a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="item company">
+                            <h4>Company</h4>
+                            <ul>
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Gallery</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="item destination-link">
+                            <h4>Popular Destination</h4>
+                            <ul>
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Gallery</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Gallery</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item location">
+                            <h4>Contact Us</h4>
+
+                            <ul class="location">
+                                <li>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Location</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone-alt"></i>
+                                    <span>
+                                        <a href="#">(012)-345-6789</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="far fa-envelope"></i>
+                                    <span>
+                                        <a href="#">tourntravel@testmail.com</a>
+                                    </span>
+                                </li>
+                            </ul>
+
+                            <ul class="social">
+                                <li>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="text">
+                    <p class="mb-0">2021 &copy; All right reserved.</p>
+                </div>
+                <div class="cards">
+                    <span>We accept: </span>
+                    <ul>
+                        <li>
+                            <img src="assets/images/payment1.png" alt="pay" />
+                        </li>
+                        <li>
+                            <img src="assets/images/payment2.png" alt="pay" />
+                        </li>
+                        <li>
+                            <img src="assets/images/payment3.png" alt="pay" />
+                        </li>
+                        <li>
+                            <img src="assets/images/payment4.png" alt="pay" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer end -->
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.2.2.4.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/mixitup.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/venobox.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>

@@ -158,6 +158,13 @@ ul{
     color: #ffffff;
 }
 
+@media (max-width: 575px) {
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
 .section-title {
     text-align: center;
     max-width: 600px;

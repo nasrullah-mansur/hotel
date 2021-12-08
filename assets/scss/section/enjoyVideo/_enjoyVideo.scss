@@ -17,6 +17,14 @@
             font-weight: 400;
             color: $white;
             margin-bottom: 50px;
+
+            @media (max-width: 767.98px) {
+                font-size: 90px;
+            }
+
+            @media (max-width: 575px) {
+                font-size: 60px;
+            }
         }
 
         a {

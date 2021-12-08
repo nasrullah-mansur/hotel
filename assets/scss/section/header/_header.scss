@@ -16,11 +16,19 @@
 
             img {
                 max-height: 90px;
+
+                @media (max-width: 767.98px) {
+                    height: 60px;
+                }
             }
         }
 
         .list {
             margin-left: 50px;
+
+            @media (max-width: 1150px) {
+                margin-left: 30px;
+            }
 
             ul {
                 display: flex;
@@ -35,9 +43,33 @@
                         margin-right: 30px;
                         transition: $transition;
 
+                        @media (max-width: 1150px) {
+                            margin-right: 16px;
+                        }
+
                         &:hover {
                             color: $color-three;
                         }
+                    }
+                }
+            }
+
+            @media (max-width: 767.98px) {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: $white;
+                margin-left: 0;
+                display: none;
+                border-top: 1px solid #eee;
+
+                ul {
+                    flex-direction: column;
+                    padding: 30px;
+
+                    li {
+                        margin-bottom: 10px;
                     }
                 }
             }
@@ -45,6 +77,9 @@
 
         .contact {
             margin-left: auto;
+            @media (max-width: 991.98px) {
+                display: none;
+            }
 
             ul {
                 display: flex;
@@ -80,6 +115,12 @@
 
         .search {
             margin-left: 30px;
+            display: flex;
+
+            @media (max-width: 991.98px) {
+                margin-left: auto;
+            }
+
             a {
                 width: 90px;
                 height: 90px;
@@ -87,6 +128,21 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                margin-left: 8px;
+
+                @media (max-width: 767.98px) {
+                    width: 60px;
+                    height: 60px;
+                }
+
+                &.mobile-menu {
+                    display: none;
+                    background-color: $color-three;
+
+                    @media (max-width: 767.98px) {
+                        display: flex;
+                    }
+                }
                 
                 i {
                     font-size: 18px;
