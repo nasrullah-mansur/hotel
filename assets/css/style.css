@@ -1,21 +1,3 @@
-/*
-------------- Table of content ----------------
-
-Template Name: 
-Template URI: 
-Description: 
-Author: Nasrullah Mansur
-Author URI: http://divinecoder.com
-Version: 1.0
-
----------------------- common content ----------
-#.body reset content
-#.header area
-#.footer
-#.hero-banner-area
-#.button
-
-*/
 @import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
@@ -1799,6 +1781,10 @@ ul {
   font-size: 18px;
 }
 
+.checkout .order .list ul li span:first-child {
+  margin-right: 10px;
+}
+
 .checkout .order .list ul li span.text-strong {
   font-weight: 600;
 }
@@ -1876,4 +1862,156 @@ ul {
   padding: 0 15px;
   background-color: #2180a8;
   color: #ffffff;
+}
+
+.testimonial-page {
+  padding: 100px 0;
+  background-color: #F7FAFD;
+}
+
+.testimonial-page .section-title {
+  margin-bottom: 50px;
+}
+
+.testimonial-page .section-title .diamond img {
+  background-color: #F7FAFD;
+}
+
+.testimonial-page .item {
+  position: relative;
+  height: calc(100% - 50px);
+  margin-bottom: 50px;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 30px 20px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.testimonial-page .item > i {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #ff8927;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.testimonial-page .item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.testimonial-page .item p {
+  margin-top: 15px;
+}
+
+.testimonial-page .item h4 {
+  margin-bottom: 0;
+}
+
+.testimonial-page .item span {
+  font-size: 14px;
+  color: #ff8927;
+}
+
+.destination-page {
+  padding: 100px 0;
+}
+
+.destination-page .left-sidebar h4 {
+  margin-bottom: 15px;
+}
+
+.destination-page .left-sidebar .sidebar-item {
+  margin-bottom: 30px;
+}
+
+.destination-page .left-sidebar .sidebar-item .add {
+  border: 1px solid #eee;
+  padding: 30px;
+}
+
+.destination-page .left-sidebar .sidebar-item .add img {
+  max-width: 100%;
+}
+
+.destination-page .left-sidebar .filtering {
+  border: 1px solid #eee;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.destination-page .left-sidebar .filtering .input-item {
+  margin-bottom: 15px;
+}
+
+.destination-page .left-sidebar .filtering .input-item select {
+  width: 100%;
+  height: 45px;
+  border-radius: 0;
+  background-color: transparent;
+  color: #040e27;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.destination-page .left-sidebar .filtering .btn-area button {
+  width: 100%;
+  height: 45px;
+  background-color: #ff8927;
+  color: #ffffff;
+  border-radius: 0;
+  border: 0;
+}
+
+.destination-page .right-side.popular-place {
+  padding: 0;
+  background-color: transparent;
+}
+
+.destination-page .right-side .load-more {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.destination-page .right-side .load-more a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 45px;
+  text-align: center;
+  padding: 0 30px;
+  background-color: #ff8927;
+  color: #ffffff;
+  font-family: "Josefin Sans", sans-serif;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.destination-page .right-side .load-more a:hover {
+  background-color: #2180a8;
 }

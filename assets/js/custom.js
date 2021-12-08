@@ -43,9 +43,4 @@ $(document).ready(function() {
         $('.header .content .list').slideToggle();
     })
 
-
-
-    new VenoBox({
-        selector: '.my-video-links',
-    });
 });

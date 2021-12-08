@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Travel Agency</title>
+
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/css/all.min.css" />
+        <link rel="stylesheet" href="assets/css/slick.css" />
+
+        <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+
+    <body>
+        <!-- Search area start -->
+        <div class="search-form">
+            <span class="close">
+                <i class="fas fa-times"></i>
+            </span>
+            <form>
+                <input type="text" placeholder="Search here.." />
+                <button>Search</button>
+            </form>
+        </div>
+        <!-- Search area end -->
+
+        <!-- Header start -->
+        <header class="header">
+            <div class="content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="logo" />
+                    </a>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Destination</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="contact">
+                    <ul>
+                        <li class="phone">
+                            <a href="#"><i class="fas fa-phone-alt"></i> 10(256)-928 256</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <a href="#" class="show-search">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="#" class="mobile-menu">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!-- Header end -->
+
+        <!-- Banner start -->
+        <section class="banner">
+            <div class="slider">
+                <div class="slider-item" style="background-image: url(assets/images/slider-1.webp);">
+                    <div class="content">
+                        <h3>Istanbul</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam provident magnam explicabo, itaque esse alias omnis facere quos. Voluptas vel expedita culpa suscipit dolores. Labore vel molestiae aut officiis
+                            sequi.
+                        </p>
+                        <a href="#">Explore Now</a>
+                    </div>
+                </div>
+                <div class="slider-item" style="background-image: url(assets/images/slider-2.webp);">
+                    <div class="content">
+                        <h3>Maldives</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam provident magnam explicabo, itaque esse alias omnis facere quos. Voluptas vel expedita culpa suscipit dolores. Labore vel molestiae aut officiis
+                            sequi.
+                        </p>
+                        <a href="#">Explore Now</a>
+                    </div>
+                </div>
+                <div class="slider-item" style="background-image: url(assets/images/slider-3.webp);">
+                    <div class="content">
+                        <h3>Dubai</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam provident magnam explicabo, itaque esse alias omnis facere quos. Voluptas vel expedita culpa suscipit dolores. Labore vel molestiae aut officiis
+                            sequi.
+                        </p>
+                        <a href="#">Explore Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Banner end -->
+
+        <!-- Filter start -->
+        <section class="filter">
+            <div class="container">
+                <div class="content">
+                    <h2>Where you want to go?</h2>
+                    <form>
+                        <input type="text" placeholder="Where to go?" />
+                        <input type="date" />
+                        <select>
+                            <option>Travel Type</option>
+                            <option>Some Option</option>
+                            <option>Another Option</option>
+                        </select>
+                        <button>Search</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Filter end -->
+
+        <!-- Destination page start -->
+        <section class="destination-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <aside class="left-sidebar">
+                            <h4>Filter Result</h4>
+                            <div class="filtering">
+                                <div class="input-item">
+                                    <select>
+                                        <option selected>Select country</option>
+                                        <option value="1">Pakistan</option>
+                                        <option value="1">Bangladesh</option>
+                                        <option value="1">United Kindom</option>
+                                        <option value="1">United State</option>
+                                    </select>
+                                </div>
+                                <div class="input-item">
+                                    <select>
+                                        <option selected>Travel Type</option>
+                                        <option value="1">Normal</option>
+                                        <option value="1">Premium</option>
+                                        <option value="1">Deluxe</option>
+                                    </select>
+                                </div>
+                                <div class="btn-area">
+                                    <button>Reset</button>
+                                </div>
+                            </div>
+                            <div class="sidebar-item">
+                                <div class="add">
+                                    <img src="assets/images/add.jpg" alt="add" />
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="right-side popular-place">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="single-item">
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="assets/images/p-1.webp" alt="img" />
+                                                <span class="price">$500</span>
+                                            </div>
+                                            <div class="text">
+                                                <h4>California</h4>
+                                                <p>United State of America</p>
+                                                <div class="bottom">
+                                                    <div class="ratting">
+                                                        <div class="stars">
+                                                            <i class="active fas fa-star"></i>
+                                                            <i class="active fas fa-star"></i>
+                                                            <i class="active fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                        </div>
+                                                        <div class="count">
+                                                            <span>(20 Review)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="time">
+                                                        <i class="far fa-clock"></i>
+                                                        <span>5 Days</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="single-item">
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="assets/images/p-2.webp" alt="img" />
+                                                <span class="price">$500</span>
+                                            </div>
+                                            <div class="text">
+                                                <h4>California</h4>
+                                                <p>United State of America</p>
+                                                <div class="bottom">
+                                                    <div class="ratting">
+                                                        <div class="stars">
+                                                            <i class="active fas fa-star"></i>
+                                                            <i class="active fas fa-star"></i>
+                                                            <i class="active fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                        </div>
+                                                        <div class="count">
+                                                            <span>(20 Review)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="time">
+                                                        <i class="far fa-clock"></i>
+                                                        <span>5 Days</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="single-item">
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="assets/images/p-3.webp" alt="img" />
+                                                <span class="price">$500</span>
+                                            </div>
+                                            <div class="text">
+                                                <h4>California</h4>
+                                                <p>United State of America</p>
+                                                <div class="bottom">
+                                                    <div class="ratting">
+                                                        <div class="stars">
+                                                            <i class="active fas fa-star"></i>
+                                                            <i class="active fas fa-star"></i>
+                                                            <i class="active fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                        </div>
+                                                        <div class="count">
+                                                            <span>(20 Review)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="time">
+                                                        <i class="far fa-clock"></i>
+                                                        <span>5 Days</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="single-item">
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="assets/images/p-4.webp" alt="img" />
+                                                <span class="price">$500</span>
+                                            </div>
+                                            <div class="text">
+                                                <h4>California</h4>
+                                                <p>United State of America</p>
+                                                <div class="bottom">
+                                                    <div class="ratting">
+                                                        <div class="stars">
+                                                            <i class="active fas fa-star"></i>
+                                                            <i class="active fas fa-star"></i>
+                                                            <i class="active fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                        </div>
+                                                        <div class="count">
+                                                            <span>(20 Review)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="time">
+                                                        <i class="far fa-clock"></i>
+                                                        <span>5 Days</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="single-item">
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="assets/images/p-5.webp" alt="img" />
+                                                <span class="price">$500</span>
+                                            </div>
+                                            <div class="text">
+                                                <h4>California</h4>
+                                                <p>United State of America</p>
+                                                <div class="bottom">
+                                                    <div class="ratting">
+                                                        <div class="stars">
+                                                            <i class="active fas fa-star"></i>
+                                                            <i class="active fas fa-star"></i>
+                                                            <i class="active fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                        </div>
+                                                        <div class="count">
+                                                            <span>(20 Review)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="time">
+                                                        <i class="far fa-clock"></i>
+                                                        <span>5 Days</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="single-item">
+                                        <a href="#">
+                                            <div class="img">
+                                                <img src="assets/images/p-6.webp" alt="img" />
+                                                <span class="price">$500</span>
+                                            </div>
+                                            <div class="text">
+                                                <h4>California</h4>
+                                                <p>United State of America</p>
+                                                <div class="bottom">
+                                                    <div class="ratting">
+                                                        <div class="stars">
+                                                            <i class="active fas fa-star"></i>
+                                                            <i class="active fas fa-star"></i>
+                                                            <i class="active fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                        </div>
+                                                        <div class="count">
+                                                            <span>(20 Review)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="time">
+                                                        <i class="far fa-clock"></i>
+                                                        <span>5 Days</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="load-more">
+                                        <a href="#">Load More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Destination page end -->
+
+        <!-- Footer start -->
+        <section class="footer">
+            <div class="container">
+                <div class="subscriber">
+                    <form>
+                        <input type="text" placeholder="Subscribe now" />
+                        <button><i class="far fa-paper-plane"></i> Send</button>
+                    </form>
+                </div>
+                <div class="content">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="item logo">
+                                <a href="#">
+                                    <img src="assets/images/logo.png" alt="img" />
+                                </a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                            <div class="item company">
+                                <h4>Company</h4>
+                                <ul>
+                                    <li><a href="#">Pricing</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Gallery</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="item destination-link">
+                                <h4>Popular Destination</h4>
+                                <ul>
+                                    <li><a href="#">Pricing</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Gallery</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">Pricing</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Gallery</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="item location">
+                                <h4>Contact Us</h4>
+
+                                <ul class="location">
+                                    <li>
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Location</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-phone-alt"></i>
+                                        <span>
+                                            <a href="#">(012)-345-6789</a>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="far fa-envelope"></i>
+                                        <span>
+                                            <a href="#">tourntravel@testmail.com</a>
+                                        </span>
+                                    </li>
+                                </ul>
+
+                                <ul class="social">
+                                    <li>
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div class="text">
+                        <p class="mb-0">2021 &copy; All right reserved.</p>
+                    </div>
+                    <div class="cards">
+                        <span>We accept: </span>
+                        <ul>
+                            <li>
+                                <img src="assets/images/payment1.png" alt="pay" />
+                            </li>
+                            <li>
+                                <img src="assets/images/payment2.png" alt="pay" />
+                            </li>
+                            <li>
+                                <img src="assets/images/payment3.png" alt="pay" />
+                            </li>
+                            <li>
+                                <img src="assets/images/payment4.png" alt="pay" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer end -->
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.2.2.4.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/slick.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+    </body>
+</html>
