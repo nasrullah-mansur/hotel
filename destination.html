@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Travel Agency</title>
+        <title>Travel Agency :: Destinations</title>
 
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="assets/css/all.min.css" />
@@ -119,7 +119,7 @@
             <div class="container">
                 <div class="content">
                     <h2>Where you want to go?</h2>
-                    <form>
+                    <form id="filter-form">
                         <input type="text" placeholder="Where to go?" />
                         <input type="date" />
                         <select>
@@ -141,28 +141,30 @@
                     <div class="col-lg-4">
                         <aside class="left-sidebar">
                             <h4>Filter Result</h4>
-                            <div class="filtering">
-                                <div class="input-item">
-                                    <select>
-                                        <option selected>Select country</option>
-                                        <option value="1">Pakistan</option>
-                                        <option value="1">Bangladesh</option>
-                                        <option value="1">United Kindom</option>
-                                        <option value="1">United State</option>
-                                    </select>
+                            <form>
+                                <div class="filtering">
+                                    <div class="input-item">
+                                        <select>
+                                            <option selected>Select country</option>
+                                            <option value="1">Pakistan</option>
+                                            <option value="1">Bangladesh</option>
+                                            <option value="1">United Kindom</option>
+                                            <option value="1">United State</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-item">
+                                        <select>
+                                            <option selected>Travel Type</option>
+                                            <option value="1">Normal</option>
+                                            <option value="1">Premium</option>
+                                            <option value="1">Deluxe</option>
+                                        </select>
+                                    </div>
+                                    <div class="btn-area">
+                                        <button type="reset">Reset</button>
+                                    </div>
                                 </div>
-                                <div class="input-item">
-                                    <select>
-                                        <option selected>Travel Type</option>
-                                        <option value="1">Normal</option>
-                                        <option value="1">Premium</option>
-                                        <option value="1">Deluxe</option>
-                                    </select>
-                                </div>
-                                <div class="btn-area">
-                                    <button>Reset</button>
-                                </div>
-                            </div>
+                            </form>
                             <div class="sidebar-item">
                                 <div class="add">
                                     <img src="assets/images/add.jpg" alt="add" />

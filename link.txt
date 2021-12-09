@@ -1,0 +1,5 @@
+https://divinecoder.com/html/travel/
+https://divinecoder.com/html/travel/cart.html
+https://divinecoder.com/html/travel/checkout.html
+https://divinecoder.com/html/travel/testimonial.html
+https://divinecoder.com/html/travel/destination.html

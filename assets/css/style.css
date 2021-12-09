@@ -293,6 +293,8 @@ ul {
     margin-left: 0;
     display: none;
     border-top: 1px solid #eee;
+    -webkit-box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.03);
+            box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.03);
   }
   .header .content .list ul {
     -webkit-box-orient: vertical;
@@ -463,6 +465,15 @@ ul {
 
 .footer .subscriber form button i {
   margin-right: 8px;
+}
+
+@media (max-width: 575px) {
+  .footer .subscriber form input {
+    width: calc(100% - 100px);
+  }
+  .footer .subscriber form button {
+    width: 100px;
+  }
 }
 
 .footer .content {
@@ -1445,6 +1456,15 @@ ul {
   margin-right: 8px;
 }
 
+@media (max-width: 575px) {
+  .search-form form input {
+    width: calc(100% - 90px);
+  }
+  .search-form form button {
+    width: 90px;
+  }
+}
+
 .search-form.active {
   opacity: 1;
   visibility: visible;
@@ -1466,6 +1486,11 @@ ul {
   .my-card table tbody {
     border: 0 !important;
   }
+}
+
+.my-card table tr.no-item p {
+  margin-bottom: 0;
+  text-align: left !important;
 }
 
 .my-card table tr td {
@@ -1575,6 +1600,7 @@ ul {
 
 .my-card table tr td .checkout {
   text-align: right;
+  padding-top: 30px;
 }
 
 .my-card table tr td .checkout h4 {
@@ -1694,12 +1720,16 @@ ul {
 
 .checkout .details .input-item input {
   width: 100%;
-  height: 40px;
+  height: 45px;
   padding: 0 15px;
   background-color: transparent;
   border: 1px solid #ddd;
   border-radius: 0;
   color: #040e27;
+}
+
+.checkout .details .input-item input.is-invalid {
+  border: 1px solid #dc3545;
 }
 
 .checkout .details .input-item input::-webkit-input-placeholder {
@@ -1719,7 +1749,7 @@ ul {
 }
 
 .checkout .details .input-item input:focus {
-  border-color: #ff8927;
+  border-color: #2180a8;
 }
 
 .checkout .details .input-item select {
@@ -1730,6 +1760,10 @@ ul {
   border: 1px solid #ddd;
   padding: 0 15px;
   cursor: pointer;
+}
+
+.checkout .details .input-item select.is-invalid {
+  border: 1px solid #dc3545;
 }
 
 .checkout .details .input-item h3 {
@@ -1745,6 +1779,30 @@ ul {
   background-color: transparent;
   border: 1px solid #ddd;
   padding: 10px 15px;
+}
+
+.checkout .details .input-item textarea.is-invalid {
+  border: 1px solid #dc3545;
+}
+
+.checkout .details .input-item textarea:focus {
+  border-color: #2180a8;
+}
+
+.checkout .details .input-item textarea::-webkit-input-placeholder {
+  color: rgba(4, 14, 39, 0.6);
+}
+
+.checkout .details .input-item textarea:-ms-input-placeholder {
+  color: rgba(4, 14, 39, 0.6);
+}
+
+.checkout .details .input-item textarea::-ms-input-placeholder {
+  color: rgba(4, 14, 39, 0.6);
+}
+
+.checkout .details .input-item textarea::placeholder {
+  color: rgba(4, 14, 39, 0.6);
 }
 
 .checkout .order {

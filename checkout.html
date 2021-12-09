@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Travel Agency</title>
+        <title>Travel Agency :: Checkout</title>
 
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="assets/css/all.min.css" />
@@ -92,7 +92,7 @@
         <!-- Checkout start -->
         <section class="checkout">
             <div class="container">
-                <form>
+                <form id="checkout-form">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="details">
@@ -108,7 +108,7 @@
                                 </div>
                                 <div class="input-item">
                                     <select>
-                                        <option selected>Select country *</option>
+                                        <option selected value="">Select country *</option>
                                         <option value="1">Pakistan</option>
                                         <option value="1">Bangladesh</option>
                                         <option value="1">United Kindom</option>
@@ -128,13 +128,13 @@
                                     <input type="text" placeholder="State / Province *" />
                                 </div>
                                 <div class="input-item">
-                                    <input type="text" placeholder="Postcode / Zip code *" />
+                                    <input type="number" placeholder="Postcode / Zip code *" />
                                 </div>
                                 <div class="input-item">
-                                    <input type="text" placeholder="Phone *" />
+                                    <input type="phone" placeholder="Phone *" />
                                 </div>
                                 <div class="input-item">
-                                    <input type="text" placeholder="Email *" />
+                                    <input type="email" placeholder="Email *" />
                                 </div>
                                 <div class="input-item">
                                     <h3>Additional information</h3>
@@ -181,13 +181,13 @@
                                                 <div class="accordion-item">
                                                     <div id="pay-1">
                                                         <div class="payment-chose">
-                                                            <input name="payment" type="radio" id="card-1" />
+                                                            <input checked name="payment" type="radio" id="card-1" />
                                                             <label class="collapsed" data-bs-toggle="collapse" data-bs-target="#coll-pay-1" aria-expanded="false" aria-controls="coll-pay-1" for="card-1">
                                                                 <i class="fas fa-check"></i> Card Payment
                                                             </label>
                                                         </div>
                                                     </div>
-                                                    <div id="coll-pay-1" class="accordion-collapse collapse" aria-labelledby="pay-1" data-bs-parent="#accordionExample">
+                                                    <div id="coll-pay-1" class="accordion-collapse collapse show" aria-labelledby="pay-1" data-bs-parent="#accordionExample">
                                                         <div class="accordion-body">
                                                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
                                                         </div>
@@ -340,5 +340,45 @@
         <script src="assets/js/jquery.2.2.4.min.js"></script>
         <script src="assets/js/bootstrap.bundle.min.js"></script>
         <script src="assets/js/custom.js"></script>
+        <script>
+            // Form Validation;
+            let checkoutForm = document.getElementById("checkout-form");
+            checkoutForm.addEventListener("submit", (event) => {
+                let allInputs = checkoutForm.querySelectorAll("input");
+
+                for (let input of allInputs) {
+                    inputValueCheck(input, event);
+                }
+
+                let textArea = checkoutForm.querySelector("textarea");
+                inputValueCheck(textArea, event);
+
+                let select = checkoutForm.querySelector("select");
+                selectValueCheck(select, event);
+
+                function inputValueCheck(input, event) {
+                    if (input.value == "") {
+                        event.preventDefault();
+                        input.classList.add("is-invalid");
+                    }
+
+                    input.addEventListener("keydown", (event) => {
+                        event.target.classList.remove("is-invalid");
+                    });
+                }
+
+                function selectValueCheck(input, event) {
+                    console.log(input.value);
+                    if (input.value == "") {
+                        event.preventDefault();
+                        input.classList.add("is-invalid");
+                    }
+
+                    input.addEventListener("change", (event) => {
+                        event.target.classList.remove("is-invalid");
+                    });
+                }
+            });
+        </script>
     </body>
 </html>

@@ -59,6 +59,16 @@
                 margin-right: 8px;
             }
         }
+
+        @media (max-width: 575px) {
+            input {
+                width: calc(100% - 90px);
+            }
+
+            button {
+                width: 90px;
+            }
+        }
     }
 
     &.active {

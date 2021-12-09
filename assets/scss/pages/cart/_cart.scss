@@ -13,11 +13,19 @@
         }
 
         tr {
+            &.no-item {
+                p {
+                    margin-bottom: 0;
+                    text-align: left !important;
+                }
+            }
+
             td {
                 padding: 15px;
                 vertical-align: middle;
                 font-family: $titleFont;
                 color: $titleColor;
+
 
                 &:first-child {
                     padding-left: 0;
@@ -102,6 +110,7 @@
 
                 .checkout {
                     text-align: right;
+                    padding-top: 30px;
 
                     h4 {
                         font-weight: 500;

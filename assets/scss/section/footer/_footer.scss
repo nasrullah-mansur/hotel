@@ -35,6 +35,16 @@
                     margin-right: 8px;
                 }
             }
+
+            @media (max-width: 575px) {
+                input {
+                    width: calc(100% - 100px);
+                }
+    
+                button {
+                    width: 100px;
+                }
+            }
         }
     }
 

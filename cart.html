@@ -110,17 +110,17 @@
                                 </div>
                             </td>
                             <td data-title="Price">
-                                <span class="price">$45.00</span>
+                                <div class="price">$<span>45.00</span></div>
                             </td>
                             <td data-title="Quantity">
                                 <div class="quantity">
                                     <span class="minus">&minus;</span>
-                                    <input type="text" value="2" />
+                                    <input type="text" value="1" />
                                     <span class="plus">&plus;</span>
                                 </div>
                             </td>
                             <td data-title="Total">
-                                <div class="total">$45.00</div>
+                                <div class="total">$<span>45.00</span></div>
                             </td>
                             <td data-title="Remove">
                                 <div class="close">
@@ -136,7 +136,7 @@
                                 </div>
                             </td>
                             <td data-title="Price">
-                                <span class="price">$45.00</span>
+                                <div class="price">$<span>46.00</span></div>
                             </td>
                             <td data-title="Quantity">
                                 <div class="quantity">
@@ -146,7 +146,7 @@
                                 </div>
                             </td>
                             <td data-title="Total">
-                                <div class="total">$45.00</div>
+                                <div class="total">$<span>92.00</span></div>
                             </td>
                             <td data-title="Remove">
                                 <div class="close">
@@ -162,17 +162,17 @@
                                 </div>
                             </td>
                             <td data-title="Price">
-                                <span class="price">$45.00</span>
+                                <div class="price">$<span>48.00</span></div>
                             </td>
                             <td data-title="Quantity">
                                 <div class="quantity">
                                     <span class="minus">&minus;</span>
-                                    <input type="text" value="2" />
+                                    <input type="text" value="1" />
                                     <span class="plus">&plus;</span>
                                 </div>
                             </td>
                             <td data-title="Total">
-                                <div class="total">$45.00</div>
+                                <div class="total">$<span>48.00</span></div>
                             </td>
                             <td data-title="Remove">
                                 <div class="close">
@@ -180,14 +180,19 @@
                                 </div>
                             </td>
                         </tr>
+                        <tr class="no-item">
+                            <td colspan="5">
+                                <p>No Item Found</p>
+                            </td>
+                        </tr>
 
                         <tr>
                             <td colspan="5">
                                 <div class="checkout">
-                                    <h4 class="subtotal">Subtotal <span class="amount">$268.00</span> USD</h4>
+                                    <h4 class="subtotal">Subtotal $<span class="amount">185.00</span> USD</h4>
                                     <p class="vat">Shipping, taxes, and discounts calculated at checkout.</p>
                                     <div class="btn-area">
-                                        <a class="clear" href="#">Clear Cart</a>
+                                        <a class="clear clear-cart" href="#">Clear Cart</a>
                                         <a href="#" class="checkout">Proceed To CheckOut <i class="fas fa-arrow-right"></i></a>
                                     </div>
                                 </div>
@@ -315,5 +320,97 @@
         <script src="assets/js/jquery.2.2.4.min.js"></script>
         <script src="assets/js/bootstrap.bundle.min.js"></script>
         <script src="assets/js/custom.js"></script>
+
+        <script>
+            if ($(".my-card tbody tr").length > 0) {
+                let allItems = document.querySelectorAll(".my-card tbody tr:not(:last-child, .no-item)");
+                let subTotal = 0;
+                let subTotalArea = document.querySelector(".subtotal .amount");
+
+                emptyItem(allItems);
+
+                for (let tr of allItems) {
+                    let totalPrice = tr.querySelector(".total span");
+                    let singlePrice = tr.querySelector(".price span").innerText;
+
+                    tr.querySelector(".quantity").addEventListener("click", (event) => {
+                        let plusBtn = event.target.classList.contains("plus");
+                        let minusBtn = event.target.classList.contains("minus");
+                        let textField = event.target.parentElement.querySelector("input");
+
+                        if (plusBtn) {
+                            textField.value = Number(textField.value) + 1;
+                            let calculateTotalPrice = Number(singlePrice) * textField.value;
+                            totalPrice.innerText = calculateTotalPrice.toFixed(2);
+                        } else if (minusBtn) {
+                            if (textField.value >= 1) {
+                                textField.value = Number(textField.value) - 1;
+                                let calculateTotalPrice = Number(singlePrice) * textField.value;
+                                totalPrice.innerText = calculateTotalPrice.toFixed(2);
+                            }
+                        }
+                        // Subtotal;
+                        subTotalFun();
+                    });
+
+                    tr.querySelector(".quantity input").addEventListener("keyup", (event) => {
+                        onlyNumberKey(event);
+                        let inputValue = event.target.value > 0 ? event.target.value : 0;
+                        let calculateTotalPrice = Number(singlePrice) * inputValue;
+                        totalPrice.innerText = calculateTotalPrice.toFixed(2);
+                        subTotalFun();
+                    });
+
+                    // Remove;
+                    tr.querySelector("button").addEventListener("click", (event) => {
+                        let parentTr = event.target.parentElement.parentElement.parentElement;
+                        parentTr.remove();
+                        subTotalFun();
+                        let allItemAfterRemove = document.querySelectorAll(".my-card tbody tr:not(:last-child, .no-item)");
+                        emptyItem(allItemAfterRemove);
+                    });
+                }
+                function subTotalFun() {
+                    let allTotalValue = document.querySelectorAll(".my-card tbody tr:not(:last-child) .total span");
+                    subTotal = Array.from(allTotalValue).reduce((a, b) => {
+                        return a + Number(b.innerText);
+                    }, 0);
+
+                    subTotalArea.innerText = subTotal.toFixed(2);
+                }
+
+                // Validate;
+                function onlyNumberKey(evt) {
+                    let value = evt.target.value;
+                    let inputValue;
+                    if (value.match(/[^0-9]+/g) != null) {
+                        inputValue = value.replace(/[^0-9]+/g, "");
+                    } else {
+                        inputValue = value;
+                    }
+                    evt.target.value = inputValue;
+                }
+
+                // Empty item;
+                function emptyItem(getAllItem) {
+                    if (getAllItem.length > 0) {
+                        document.querySelector(".no-item").style.display = "none";
+                    } else {
+                        document.querySelector(".no-item").style.display = "table-row";
+                    }
+                }
+
+                // Clear cart;
+                document.querySelector(".clear-cart").addEventListener("click", (event) => {
+                    event.preventDefault();
+                    for (let singleTr of allItems) {
+                        singleTr.remove();
+                        subTotalFun();
+                        allItems = document.querySelectorAll(".my-card tbody tr:not(:last-child, .no-item)");
+                        emptyItem(allItems);
+                    }
+                });
+            }
+        </script>
     </body>
 </html>
