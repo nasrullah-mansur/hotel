@@ -58,4 +58,61 @@ $(document).ready(function () {
             }
         });
     }
+
+
+    let allRadios = document.querySelectorAll('.radio-ratting input');
+    let allLabel = document.querySelectorAll('.radio-ratting label');
+    Array.from(allRadios).forEach((radio, index) => {
+        radio.setAttribute('id', 'input-' + index);
+    })
+
+    Array.from(allLabel).forEach((label, index) => {
+        label.setAttribute('for', 'input-' + index);
+
+        label.addEventListener('click', event => {
+            if(event.target.getAttribute('data-value')) {
+                getLabelValue(event.target)
+            } else {
+                getLabelValue(event.target.parentElement)
+            } 
+        })
+
+    })
+
+    function getLabelValue(tag) {
+        let dataValue = tag.getAttribute('data-value');
+        let labels = tag.parentElement.parentElement.querySelectorAll('label');
+
+        Array.from(labels).forEach((label, index) => {
+            if(index <= dataValue - 1) {
+                label.classList.add('active-color')
+                label.querySelector('i').classList.add('fas');
+                label.querySelector('i').classList.remove('far');
+            } else {
+                label.classList.remove('active-color')
+                label.querySelector('i').classList.remove('fas');
+                label.querySelector('i').classList.add('far');
+            }
+        })
+    }
+
+    function getLabelValueOver(tag) {
+        let dataValue = tag.getAttribute('data-value');
+        let labels = tag.parentElement.parentElement.querySelectorAll('label');
+
+        Array.from(labels).forEach((label, index) => {
+            if(index <= dataValue - 1) {
+                label.classList.add('hover-color')
+                label.querySelector('i').classList.add('fas');
+                label.querySelector('i').classList.remove('far');
+            } else {
+                label.classList.remove('hover-color')
+                label.querySelector('i').classList.remove('fas');
+                label.querySelector('i').classList.add('far');
+            }
+        })
+    }
+
+
+
 });

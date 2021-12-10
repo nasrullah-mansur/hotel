@@ -1,0 +1,44 @@
+.recent {
+    padding: 100px 0;
+
+    .section-title {
+        margin-bottom: 50px;
+    }
+
+    .item {
+        margin-bottom: 30px;
+
+        .img {
+            border-radius: 5px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .text {
+            span {
+                display: block;
+                font-size: 14px;
+                font-weight: 400;
+                padding: 10px 0;
+            }
+
+            h4 {
+                font-size: 24px;
+                line-height: 32px;
+                margin-bottom: 0;
+
+                a {
+                    color: $titleColor;
+                    transition: $transition;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}

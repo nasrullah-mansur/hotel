@@ -1,0 +1,76 @@
+.filter {
+    background-color: $primary-color;
+
+    .content {
+        // display: flex;
+        align-items: center;
+        padding: 30px 0;
+
+        h2 {
+            padding-bottom: 10px;
+            color: $white;
+        }
+
+        form {
+            display: flex;
+
+            @media (max-width: 767.98px) {
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+        }
+
+        input,
+        select {
+            height: 55px;
+            padding: 0 15px;
+            width: calc(30% - 15px);
+            margin-right: 15px;
+            border: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+
+            &:focus {
+                background-color: #fff;
+            }
+
+            @media (max-width: 767.98px) {
+                width: calc(50% - 7.5px);
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
+
+            @media (max-width: 575px) {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+
+        button {
+            height: 55px;
+            width: 120px;
+            border: 0;
+            background-color: $color-three;
+            color: $white;
+            font-size: 18px;
+            font-family: $titleFont;
+            font-weight: 600;
+            transition: $transition;
+
+            @media (max-width: 767.98px) {
+                width: calc(50% - 7.5px);
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
+
+            @media (max-width: 575px) {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            &:hover {
+                background-color: $white;
+                color: $titleColor;
+            }
+        }
+    }
+}

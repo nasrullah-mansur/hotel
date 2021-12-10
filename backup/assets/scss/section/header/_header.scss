@@ -1,0 +1,175 @@
+.header {
+    background-color: $white;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    transition: $transition;
+
+    .content {
+        display: flex;
+        align-items: center;
+
+        .logo {
+
+            img {
+                max-height: 90px;
+
+                @media (max-width: 767.98px) {
+                    height: 60px;
+                }
+            }
+        }
+
+        .list {
+            margin-left: 50px;
+
+            @media (max-width: 1150px) {
+                margin-left: 30px;
+            }
+
+            ul {
+                display: flex;
+
+                li {
+                    a {
+                        display: block;
+                        font-size: 18px;
+                        font-family: $titleFont;
+                        color: $titleColor;
+                        font-weight: 600;
+                        margin-right: 30px;
+                        transition: $transition;
+
+                        @media (max-width: 1150px) {
+                            margin-right: 16px;
+                        }
+
+                        &:hover {
+                            color: $color-three;
+                        }
+                    }
+                }
+            }
+
+            @media (max-width: 767.98px) {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: $white;
+                margin-left: 0;
+                display: none;
+                border-top: 1px solid #eee;
+                box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.03);
+
+                ul {
+                    flex-direction: column;
+                    padding: 30px;
+
+                    li {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        .contact {
+            margin-left: auto;
+            @media (max-width: 991.98px) {
+                display: none;
+            }
+
+            ul {
+                display: flex;
+
+                li {
+                    a {
+                        display: block;
+                        font-size: 16px;
+                        color: $bColor;
+                        transition: $transition;
+                        margin-left: 20px;
+                        font-weight: 400;
+
+                        &:hover {
+                            color: $color-three;
+                        }
+                    }
+
+                    &.phone {
+                        font-size: 18px;
+                        font-family: $titleFont;
+                        font-weight: 600;
+                        border-right: 1px solid #eee;
+                        padding-right: 20px;
+
+                        a {
+                            color: $titleColor;
+                        }
+                    }
+                }
+            }
+        }
+
+        .search {
+            margin-left: 30px;
+            display: flex;
+
+            @media (max-width: 991.98px) {
+                margin-left: auto;
+            }
+
+            a {
+                width: 90px;
+                height: 90px;
+                background-color: $primary-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 8px;
+
+                @media (max-width: 767.98px) {
+                    width: 60px;
+                    height: 60px;
+                }
+
+                &.mobile-menu {
+                    display: none;
+                    background-color: $color-three;
+
+                    @media (max-width: 767.98px) {
+                        display: flex;
+                    }
+                }
+                
+                i {
+                    font-size: 18px;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &.fixed-top {
+        position: fixed;
+        box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.1);
+
+        .content {
+            .logo {
+                img {
+                    max-height: 50px;
+                }
+            }
+
+            .search {
+                a {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}

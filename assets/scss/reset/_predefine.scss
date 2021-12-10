@@ -204,5 +204,45 @@ ul{
     }
 }
 
+.card-action {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 9999;
 
+    ul {
+        li {
+            margin-right: 5px;
+            margin-bottom: 5px;
+
+            a {
+                position: relative;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 45px;
+                height: 45px;
+                background-color: $titleColor;
+                color: $white;
+                transition: $transition;
+
+                &:hover {
+                    background-color: $primary-color;
+                }
+                
+                i {
+                    margin-left: -5px;
+                }
+
+                span {
+                    position: absolute;
+                    right: 7px;
+                    bottom: 5px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
 

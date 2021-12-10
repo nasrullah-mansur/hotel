@@ -111,6 +111,37 @@
                         }
                     }
                 }
+
+                &.card-area {
+                    li {
+                        a {
+                            font-size: 18px;
+                            position: relative;
+                            padding-right: 5px;
+                            color: $color-three;
+
+                            span {
+                                position: absolute;
+                                left: 100%;
+                                bottom: 24px;
+                                font-size: 12px;
+                                line-height: 0;
+                                font-weight: 500;
+                            }
+
+                            &:hover {
+                                color: $color-three;
+                            }
+                        }
+
+                        &.phone {
+                            a {
+                                font-size: 16px;
+                                color: $titleColor;
+                            }
+                        }
+                    }
+                }
             }
         }
 

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -215,6 +215,54 @@ ul {
   padding-top: 15px;
 }
 
+.card-action {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 9999;
+}
+
+.card-action ul li {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.card-action ul li a {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45px;
+  height: 45px;
+  background-color: #040e27;
+  color: #ffffff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.card-action ul li a:hover {
+  background-color: #ff8927;
+}
+
+.card-action ul li a i {
+  margin-left: -5px;
+}
+
+.card-action ul li a span {
+  position: absolute;
+  right: 7px;
+  bottom: 5px;
+  font-size: 12px;
+}
+
 .header {
   background-color: #ffffff;
   padding: 15px;
@@ -347,6 +395,31 @@ ul {
 }
 
 .header .content .contact ul li.phone a {
+  color: #040e27;
+}
+
+.header .content .contact ul.card-area li a {
+  font-size: 18px;
+  position: relative;
+  padding-right: 5px;
+  color: #2180a8;
+}
+
+.header .content .contact ul.card-area li a span {
+  position: absolute;
+  left: 100%;
+  bottom: 24px;
+  font-size: 12px;
+  line-height: 0;
+  font-weight: 500;
+}
+
+.header .content .contact ul.card-area li a:hover {
+  color: #2180a8;
+}
+
+.header .content .contact ul.card-area li.phone a {
+  font-size: 16px;
   color: #040e27;
 }
 
@@ -765,7 +838,7 @@ ul {
 
 .banner .slick-arrow:hover {
   background-color: #ffffff;
-  color: #7a838b;
+  color: #040e27;
 }
 
 .page-banner {
@@ -1151,19 +1224,15 @@ ul {
   transition: all 0.3s;
 }
 
-.popular-place .single-item a {
-  display: block;
-}
-
-.popular-place .single-item a .img {
+.popular-place .single-item .img {
   position: relative;
 }
 
-.popular-place .single-item a .img img {
+.popular-place .single-item .img img {
   width: 100%;
 }
 
-.popular-place .single-item a .img .price {
+.popular-place .single-item .img .price {
   display: inline-block;
   padding: 3px 16px;
   border-radius: 15px;
@@ -1178,11 +1247,11 @@ ul {
   z-index: 1;
 }
 
-.popular-place .single-item a .text {
+.popular-place .single-item .text {
   padding: 30px 20px;
 }
 
-.popular-place .single-item a .text h4 {
+.popular-place .single-item .text h4 {
   font-size: 22px;
   font-weight: 600;
   line-height: 32px;
@@ -1191,12 +1260,22 @@ ul {
   transition: all 0.3s;
 }
 
-.popular-place .single-item a .text p {
+.popular-place .single-item .text h4 a {
+  color: #040e27;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.popular-place .single-item .text h4 a:hover {
+  color: #ff8927;
+}
+
+.popular-place .single-item .text p {
   color: #7a838b;
   margin-bottom: 10px;
 }
 
-.popular-place .single-item a .text .bottom {
+.popular-place .single-item .text .bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1205,13 +1284,13 @@ ul {
           justify-content: space-between;
 }
 
-.popular-place .single-item a .text .bottom .ratting {
+.popular-place .single-item .text .bottom .ratting {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.popular-place .single-item a .text .bottom .ratting .stars {
+.popular-place .single-item .text .bottom .ratting .stars {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1220,23 +1299,83 @@ ul {
           align-items: center;
 }
 
-.popular-place .single-item a .text .bottom .ratting .stars i {
+.popular-place .single-item .text .bottom .ratting .stars i {
   color: #7a838b;
   font-size: 12px;
   margin-right: 2px;
 }
 
-.popular-place .single-item a .text .bottom .ratting .stars i.active {
+.popular-place .single-item .text .bottom .ratting .stars i.active {
   color: #fdae5c;
 }
 
-.popular-place .single-item a .text .bottom .ratting .count span {
+.popular-place .single-item .text .bottom .ratting .count span {
   font-size: 14px;
   color: #7a838b;
 }
 
-.popular-place .single-item a .text .bottom .time {
+.popular-place .single-item .text .bottom .time {
   color: #ff8927;
+}
+
+.popular-place .single-item .text .btn-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  margin-top: 15px;
+}
+
+.popular-place .single-item .text .btn-area .add-card {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: calc(100% - 100px);
+  margin-left: 0 !important;
+  height: 45px;
+  background-color: #2180a8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  margin: 0 auto;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.popular-place .single-item .text .btn-area .add-card:hover {
+  background-color: #ff8927;
+}
+
+.popular-place .single-item .text .btn-area a {
+  height: 45px;
+  width: 90px;
+  background-color: #040e27;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-left: 5px;
+}
+
+.popular-place .single-item .text .btn-area a:hover {
+  background-color: #ff8927;
 }
 
 .popular-place .single-item:hover {
@@ -1411,6 +1550,10 @@ ul {
 
 .search-form .close:hover {
   color: #ffffff;
+}
+
+.search-form .close img {
+  width: 25px;
 }
 
 .search-form form {
@@ -2072,4 +2215,509 @@ ul {
 
 .destination-page .right-side .load-more a:hover {
   background-color: #2180a8;
+}
+
+.service-details {
+  padding: 100px 0;
+}
+
+.service-details .sidebar .sidebar-item {
+  border: 1px solid #eee;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 991.98px) {
+  .service-details .sidebar .sidebar-item.add-area {
+    display: none;
+  }
+}
+
+.service-details .sidebar ul li {
+  text-align: center;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px dashed #eee;
+}
+
+.service-details .sidebar ul li:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+.service-details .sidebar ul li img {
+  width: 45px;
+}
+
+.service-details .sidebar ul li span {
+  display: block;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #040e27;
+}
+
+@media (max-width: 991.98px) {
+  .service-details .sidebar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .service-details .sidebar ul li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .service-details .sidebar ul li img {
+    width: 35px;
+  }
+  .service-details .sidebar ul li span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 991.98px) and (max-width: 767.98px) {
+  .service-details .sidebar ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .service-details .sidebar ul li {
+    padding: 15px 0;
+  }
+}
+
+.service-details .content-area {
+  padding: 30px;
+  border: 1px solid #eee;
+}
+
+.service-details .content-area img {
+  margin-bottom: 30px;
+}
+
+.service-details .content-area .book-btn {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.service-details .content-area .book-btn a {
+  width: 180px;
+  height: 45px;
+  background-color: #ff8927;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  font-family: "Josefin Sans", sans-serif;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.service-details .content-area .book-btn a:hover {
+  background-color: #2180a8;
+}
+
+.service-details .content-area .facility-list {
+  padding-top: 30px;
+}
+
+.service-details .content-area .facility-list > ul > li {
+  border-bottom: 1px dashed #ddd;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.service-details .content-area .facility-list > ul > li p {
+  margin-bottom: 0;
+  font-family: "Josefin Sans", sans-serif;
+  color: #040e27;
+  font-weight: 600;
+  width: 220px;
+}
+
+.service-details .content-area .facility-list > ul > li > span {
+  display: block;
+  width: calc(100% - 220px);
+  font-weight: 300;
+  font-size: 14px;
+}
+
+@media (max-width: 767.98px) {
+  .service-details .content-area .facility-list > ul > li p {
+    width: 180px;
+  }
+  .service-details .content-area .facility-list > ul > li > span {
+    width: calc(100% - 180px);
+  }
+}
+
+@media (max-width: 767.98px) and (max-width: 575px) {
+  .service-details .content-area .facility-list > ul > li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .service-details .content-area .facility-list > ul > li p,
+  .service-details .content-area .facility-list > ul > li > span {
+    width: 100%;
+  }
+}
+
+.service-details .content-area .facility-list > ul ul {
+  width: calc(100% - 220px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.service-details .content-area .facility-list > ul ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 10px;
+}
+
+.service-details .content-area .facility-list > ul ul li i {
+  margin-right: 6px;
+  font-size: 13px;
+}
+
+.service-details .content-area .facility-list > ul ul li span {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+@media (max-width: 575px) {
+  .service-details .content-area .facility-list > ul ul {
+    width: 100%;
+  }
+}
+
+.service-details .reviews,
+.service-details .client {
+  padding-top: 60px;
+}
+
+.service-details .reviews h3,
+.service-details .client h3 {
+  font-weight: 700;
+  font-size: 24px;
+  border-bottom: 1px dashed #ddd;
+  margin-bottom: 30px;
+}
+
+.service-details .reviews .reviews-list,
+.service-details .client .reviews-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.service-details .reviews .reviews-list li,
+.service-details .client .reviews-list li {
+  width: 50%;
+  padding-right: 15px;
+  color: #040e27;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.service-details .reviews .reviews-list li span,
+.service-details .client .reviews-list li span {
+  display: block;
+  width: 50%;
+}
+
+.service-details .reviews .reviews-list li .stars,
+.service-details .client .reviews-list li .stars {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.service-details .reviews .reviews-list li .stars i,
+.service-details .client .reviews-list li .stars i {
+  color: #7a838b;
+  margin-right: 3px;
+  font-size: 13px;
+}
+
+.service-details .reviews .reviews-list li .stars i.active,
+.service-details .client .reviews-list li .stars i.active {
+  color: #ff8927;
+}
+
+@media (max-width: 767.98px) {
+  .service-details .reviews .reviews-list li,
+  .service-details .client .reviews-list li {
+    width: 100%;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .service-details .reviews .reviews-list li span,
+  .service-details .reviews .reviews-list li .stars,
+  .service-details .client .reviews-list li span,
+  .service-details .client .reviews-list li .stars {
+    width: auto;
+  }
+  .service-details .reviews .reviews-list li .stars,
+  .service-details .client .reviews-list li .stars {
+    margin-left: auto;
+  }
+}
+
+.service-details .reviews.client-review,
+.service-details .client.client-review {
+  border-top: 1px dashed #ddd;
+  padding-top: 30px;
+}
+
+.service-details .reviews.client-review > li,
+.service-details .client.client-review > li {
+  padding-left: 100px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.service-details .reviews.client-review > li > img,
+.service-details .client.client-review > li > img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.service-details .reviews.client-review > li .client-content h5,
+.service-details .client.client-review > li .client-content h5 {
+  font-size: 22px;
+  margin-bottom: 0;
+}
+
+.service-details .reviews.client-review > li .client-content .time,
+.service-details .client.client-review > li .client-content .time {
+  font-size: 12px;
+  font-weight: 500;
+  display: block;
+}
+
+.service-details .reviews.client-review > li .client-content .action,
+.service-details .client.client-review > li .client-content .action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.service-details .reviews.client-review > li .client-content .action a,
+.service-details .client.client-review > li .client-content .action a {
+  display: block;
+  font-size: 16px;
+  margin-right: 10px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.service-details .reviews.client-review > li .client-content .action a:first-child,
+.service-details .client.client-review > li .client-content .action a:first-child {
+  color: #2180a8;
+}
+
+.service-details .reviews.client-review > li .client-content .action a:last-child,
+.service-details .client.client-review > li .client-content .action a:last-child {
+  color: #ff8927;
+}
+
+.service-details .reviews.client-review > li .client-content p,
+.service-details .client.client-review > li .client-content p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  font-family: "Josefin Sans", sans-serif;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 575px) {
+  .service-details .reviews.client-review > li,
+  .service-details .client.client-review > li {
+    padding-left: 0;
+  }
+  .service-details .reviews.client-review > li img,
+  .service-details .client.client-review > li img {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 15px;
+  }
+}
+
+.service-details .leave-review {
+  padding-top: 30px;
+}
+
+.service-details .leave-review h2 {
+  font-weight: 700;
+  font-size: 24px;
+  border-bottom: 1px dashed #ddd;
+  margin-bottom: 30px;
+}
+
+.service-details .leave-review [class^="col"] {
+  margin-bottom: 30px;
+}
+
+.service-details .leave-review .input-item label {
+  display: block;
+  color: #040e27;
+  font-family: "Josefin Sans", sans-serif;
+  margin-bottom: 5px;
+}
+
+.service-details .leave-review .input-item input,
+.service-details .leave-review .input-item textarea {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 0 15px;
+  font-size: 14px;
+}
+
+.service-details .leave-review .input-item input:focus,
+.service-details .leave-review .input-item textarea:focus {
+  border-color: #2180a8;
+}
+
+.service-details .leave-review .input-item textarea {
+  height: 120px;
+  padding-top: 10px;
+}
+
+.service-details .leave-review .input-item.checkbox label, .service-details .leave-review .input-item.radio-ratting label {
+  display: inline-block;
+}
+
+.service-details .leave-review .input-item.checkbox input, .service-details .leave-review .input-item.radio-ratting input {
+  width: auto;
+  height: auto;
+  display: none;
+}
+
+.service-details .leave-review .input-item.checkbox label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.service-details .leave-review .input-item.checkbox label i {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 10px;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  color: #ffffff;
+}
+
+.service-details .leave-review .input-item.checkbox input:checked + label i {
+  background-color: #2180a8;
+}
+
+.service-details .leave-review .input-item.radio-ratting ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.service-details .leave-review .input-item.radio-ratting ul li p {
+  color: #040e27;
+  font-family: "Josefin Sans", sans-serif;
+  margin-bottom: 0;
+  width: 220px;
+}
+
+.service-details .leave-review .input-item.radio-ratting ul li .stars-radio {
+  width: calc(100% - 220px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.service-details .leave-review .input-item.radio-ratting ul li .stars-radio label {
+  font-size: 12px;
+  margin-right: 3px;
+  color: #7a838b;
+  cursor: pointer;
+}
+
+.service-details .leave-review .input-item.radio-ratting ul li .stars-radio label.hover-color {
+  color: #2180a8 !important;
+}
+
+.service-details .leave-review .input-item.radio-ratting ul li .stars-radio label.active-color {
+  color: #ff8927;
+}
+
+.service-details .leave-review button {
+  width: 160px;
+  height: 40px;
+  border-radius: 3px;
+  border: 0;
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+  background-color: #2180a8;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.service-details .leave-review button:hover {
+  background-color: #ff8927;
 }

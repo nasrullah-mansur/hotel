@@ -1,0 +1,199 @@
+.my-card {
+    padding: 100px 0;
+
+    table {
+        @media (max-width: 991.98px) {
+            thead {
+                display: none;
+            }
+
+            tbody {
+                border: 0 !important;
+            }
+        }
+
+        tr {
+            &.no-item {
+                p {
+                    margin-bottom: 0;
+                    text-align: left !important;
+                }
+            }
+
+            td {
+                padding: 15px;
+                vertical-align: middle;
+                font-family: $titleFont;
+                color: $titleColor;
+
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    width: 150px;
+                }
+
+                .product {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        margin-right: 30px;
+                        width: 75px;
+                    }
+
+                    h4 {
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+                }
+
+                .price {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+
+                .quantity {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    span {
+                        font-size: 18px;
+                        display: block;
+                        width: 35px;
+                        height: 35px;
+                        background-color: #eee;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: $transition;
+                        cursor: pointer;
+                        font-family: $titleFont;
+                        color: $titleColor;
+
+                        &:hover {
+                            color: $white;
+                            background-color: $primary-color;
+                        }
+                    }
+
+                    input {
+                        width: 60px;
+                        height: 40px;
+                        margin: 0 10px;
+                        border: 1px solid #ddd;
+                        text-align: center;
+                    }
+                }
+
+                .total {
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: $titleColor;
+                }
+
+                .close {
+                    font-size: 18px;
+                    
+                    button {
+                        width: 120px;
+                        height: 40px;
+                        background-color: $primary-color;
+                        color: $white;
+                        border: 0;
+                    }
+                }
+
+                .checkout {
+                    text-align: right;
+                    padding-top: 30px;
+
+                    h4 {
+                        font-weight: 500;
+                    }
+
+                    .btn-area {
+                        display: flex;
+                        justify-content: flex-end;
+
+                        a {
+                            display: block;
+                            height: 40px;
+                            padding: 0 15px;
+                            background-color: #ddd;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: $white;
+                            margin-left: 15px;
+
+                            i {
+                                font-size: 12px;
+                                padding-left: 8px;
+                            }
+
+                            &:first-child {
+                                background-color: $primary-color;
+                            }
+
+                            &:last-child {
+                                background-color: $color-three;
+                            }
+                        }
+                    }
+                }
+
+                @media (max-width: 991.98px) {
+                    display: block;
+                    width: 100%;
+                    text-align: right;
+
+                    &::before {
+                        content: attr(data-title) " ";
+                        float: left;
+                        margin-right: 15px;
+                    }
+
+                    .product {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        text-align: center;
+
+                        img {
+                            margin-right: 0;
+                        }
+
+                        h4 {
+                            margin-top: 15px;
+                        }
+                    }
+
+                    .quantity {
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+
+                    &:last-child {
+                        width: 100%;
+                    }
+                }
+
+                @media (max-width: 767.98px) {
+                    .btn-area {
+                        display: flex;
+                        flex-direction: column;
+
+                        a {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Travel Agency :: Cart</title>
+
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/css/all.min.css" />
+
+        <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+
+    <body>
+        <!-- Search area start -->
+        <div class="search-form">
+            <span class="close">
+                <i class="fas fa-times"></i>
+            </span>
+            <form>
+                <input type="text" placeholder="Search here.." />
+                <button>Search</button>
+            </form>
+        </div>
+        <!-- Search area end -->
+
+        <!-- Header start -->
+        <header class="header">
+            <div class="content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="logo" />
+                    </a>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Destination</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="contact">
+                    <ul>
+                        <li class="phone">
+                            <a href="#"><i class="fas fa-phone-alt"></i> 10(256)-928 256</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <a href="#" class="show-search">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a href="#" class="mobile-menu">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!-- Header end -->
+
+        <!-- Page banner start -->
+        <section class="page-banner" style="background-image: url(assets/images/slider-1.webp);">
+            <div class="container">
+                <h1>Cart</h1>
+                <ul class="paginate">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">My Cart</a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- Page banner end -->
+
+        <!-- My cart start -->
+        <section class="my-card">
+            <div class="container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="product">
+                                    <img src="assets/images/ins-1.webp" alt="img" />
+                                    <h4>California Tour</h4>
+                                </div>
+                            </td>
+                            <td data-title="Price">
+                                <div class="price">$<span>45.00</span></div>
+                            </td>
+                            <td data-title="Quantity">
+                                <div class="quantity">
+                                    <span class="minus">&minus;</span>
+                                    <input type="text" value="1" />
+                                    <span class="plus">&plus;</span>
+                                </div>
+                            </td>
+                            <td data-title="Total">
+                                <div class="total">$<span>45.00</span></div>
+                            </td>
+                            <td data-title="Remove">
+                                <div class="close">
+                                    <button>Remove</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product">
+                                    <img src="assets/images/ins-2.webp" alt="img" />
+                                    <h4>California Tour</h4>
+                                </div>
+                            </td>
+                            <td data-title="Price">
+                                <div class="price">$<span>46.00</span></div>
+                            </td>
+                            <td data-title="Quantity">
+                                <div class="quantity">
+                                    <span class="minus">&minus;</span>
+                                    <input type="text" value="2" />
+                                    <span class="plus">&plus;</span>
+                                </div>
+                            </td>
+                            <td data-title="Total">
+                                <div class="total">$<span>92.00</span></div>
+                            </td>
+                            <td data-title="Remove">
+                                <div class="close">
+                                    <button>Remove</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product">
+                                    <img src="assets/images/ins-3.webp" alt="img" />
+                                    <h4>California Tour</h4>
+                                </div>
+                            </td>
+                            <td data-title="Price">
+                                <div class="price">$<span>48.00</span></div>
+                            </td>
+                            <td data-title="Quantity">
+                                <div class="quantity">
+                                    <span class="minus">&minus;</span>
+                                    <input type="text" value="1" />
+                                    <span class="plus">&plus;</span>
+                                </div>
+                            </td>
+                            <td data-title="Total">
+                                <div class="total">$<span>48.00</span></div>
+                            </td>
+                            <td data-title="Remove">
+                                <div class="close">
+                                    <button>Remove</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="no-item">
+                            <td colspan="5">
+                                <p>No Item Found</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="5">
+                                <div class="checkout">
+                                    <h4 class="subtotal">Subtotal $<span class="amount">185.00</span> USD</h4>
+                                    <p class="vat">Shipping, taxes, and discounts calculated at checkout.</p>
+                                    <div class="btn-area">
+                                        <a class="clear clear-cart" href="#">Clear Cart</a>
+                                        <a href="#" class="checkout">Proceed To CheckOut <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- My cart end -->
+
+        <!-- Footer start -->
+        <section class="footer">
+            <div class="container">
+                <div class="subscriber">
+                    <form>
+                        <input type="text" placeholder="Subscribe now" />
+                        <button><i class="far fa-paper-plane"></i> Send</button>
+                    </form>
+                </div>
+                <div class="content">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="item logo">
+                                <a href="#">
+                                    <img src="assets/images/logo.png" alt="img" />
+                                </a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                            <div class="item company">
+                                <h4>Company</h4>
+                                <ul>
+                                    <li><a href="#">Pricing</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Gallery</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="item destination-link">
+                                <h4>Popular Destination</h4>
+                                <ul>
+                                    <li><a href="#">Pricing</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Gallery</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">Pricing</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Gallery</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="item location">
+                                <h4>Contact Us</h4>
+
+                                <ul class="location">
+                                    <li>
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Location</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-phone-alt"></i>
+                                        <span>
+                                            <a href="#">(012)-345-6789</a>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="far fa-envelope"></i>
+                                        <span>
+                                            <a href="#">tourntravel@testmail.com</a>
+                                        </span>
+                                    </li>
+                                </ul>
+
+                                <ul class="social">
+                                    <li>
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div class="text">
+                        <p class="mb-0">2021 &copy; All right reserved.</p>
+                    </div>
+                    <div class="cards">
+                        <span>We accept: </span>
+                        <ul>
+                            <li>
+                                <img src="assets/images/payment1.png" alt="pay" />
+                            </li>
+                            <li>
+                                <img src="assets/images/payment2.png" alt="pay" />
+                            </li>
+                            <li>
+                                <img src="assets/images/payment3.png" alt="pay" />
+                            </li>
+                            <li>
+                                <img src="assets/images/payment4.png" alt="pay" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer end -->
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.2.2.4.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+
+        <script>
+            if ($(".my-card tbody tr").length > 0) {
+                let allItems = document.querySelectorAll(".my-card tbody tr:not(:last-child, .no-item)");
+                let subTotal = 0;
+                let subTotalArea = document.querySelector(".subtotal .amount");
+
+                emptyItem(allItems);
+
+                for (let tr of allItems) {
+                    let totalPrice = tr.querySelector(".total span");
+                    let singlePrice = tr.querySelector(".price span").innerText;
+
+                    tr.querySelector(".quantity").addEventListener("click", (event) => {
+                        let plusBtn = event.target.classList.contains("plus");
+                        let minusBtn = event.target.classList.contains("minus");
+                        let textField = event.target.parentElement.querySelector("input");
+
+                        if (plusBtn) {
+                            textField.value = Number(textField.value) + 1;
+                            let calculateTotalPrice = Number(singlePrice) * textField.value;
+                            totalPrice.innerText = calculateTotalPrice.toFixed(2);
+                        } else if (minusBtn) {
+                            if (textField.value >= 1) {
+                                textField.value = Number(textField.value) - 1;
+                                let calculateTotalPrice = Number(singlePrice) * textField.value;
+                                totalPrice.innerText = calculateTotalPrice.toFixed(2);
+                            }
+                        }
+                        // Subtotal;
+                        subTotalFun();
+                    });
+
+                    tr.querySelector(".quantity input").addEventListener("keyup", (event) => {
+                        onlyNumberKey(event);
+                        let inputValue = event.target.value > 0 ? event.target.value : 0;
+                        let calculateTotalPrice = Number(singlePrice) * inputValue;
+                        totalPrice.innerText = calculateTotalPrice.toFixed(2);
+                        subTotalFun();
+                    });
+
+                    // Remove;
+                    tr.querySelector("button").addEventListener("click", (event) => {
+                        let parentTr = event.target.parentElement.parentElement.parentElement;
+                        parentTr.remove();
+                        subTotalFun();
+                        let allItemAfterRemove = document.querySelectorAll(".my-card tbody tr:not(:last-child, .no-item)");
+                        emptyItem(allItemAfterRemove);
+                    });
+                }
+                function subTotalFun() {
+                    let allTotalValue = document.querySelectorAll(".my-card tbody tr:not(:last-child) .total span");
+                    subTotal = Array.from(allTotalValue).reduce((a, b) => {
+                        return a + Number(b.innerText);
+                    }, 0);
+
+                    subTotalArea.innerText = subTotal.toFixed(2);
+                }
+
+                // Validate;
+                function onlyNumberKey(evt) {
+                    let value = evt.target.value;
+                    let inputValue;
+                    if (value.match(/[^0-9]+/g) != null) {
+                        inputValue = value.replace(/[^0-9]+/g, "");
+                    } else {
+                        inputValue = value;
+                    }
+                    evt.target.value = inputValue;
+                }
+
+                // Empty item;
+                function emptyItem(getAllItem) {
+                    if (getAllItem.length > 0) {
+                        document.querySelector(".no-item").style.display = "none";
+                    } else {
+                        document.querySelector(".no-item").style.display = "table-row";
+                    }
+                }
+
+                // Clear cart;
+                document.querySelector(".clear-cart").addEventListener("click", (event) => {
+                    event.preventDefault();
+                    for (let singleTr of allItems) {
+                        singleTr.remove();
+                        subTotalFun();
+                        allItems = document.querySelectorAll(".my-card tbody tr:not(:last-child, .no-item)");
+                        emptyItem(allItems);
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>
